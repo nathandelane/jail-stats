@@ -1,0 +1,4 @@
+2015-08-03 15:32:22 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://iml.slsheriff.org/css/body.css' [7:3] Error in class selector. (Invalid token "*". Was expecting: <IDENT>.)
+2015-08-03 15:32:22 WARN  DefaultCssErrorHandler:53 - CSS warning: 'http://iml.slsheriff.org/css/body.css' [7:3] Ignoring the whole rule.
+2015-08-03 15:39:42 WARN  DefaultCssErrorHandler:39 - CSS error: 'http://iml.slsheriff.org/css/body.css' [7:3] Error in class selector. (Invalid token "*". Was expecting: <IDENT>.)
+2015-08-03 15:39:42 WARN  DefaultCssErrorHandler:53 - CSS warning: 'http://iml.slsheriff.org/css/body.css' [7:3] Ignoring the whole rule.
