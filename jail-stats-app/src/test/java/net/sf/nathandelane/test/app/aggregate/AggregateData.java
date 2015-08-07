@@ -55,6 +55,12 @@ public class AggregateData {
         }
         
         searchResultsPage = nextDetailsPage.goBack();
+        
+        final int newSize = searchResultsPage.getLookupLinks().size();
+        
+        if (newSize != listSize) {
+          break;
+        }
       }
       
       searchResultsPage = searchResultsPage.clickOnNextLink();
