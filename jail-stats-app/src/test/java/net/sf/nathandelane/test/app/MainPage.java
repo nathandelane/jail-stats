@@ -19,6 +19,8 @@ public class MainPage extends BasePage {
   }
   
   public SearchResultsPage submit(String value) throws MalformedURLException, IOException {
+    Waiter.waitForSeconds(1);
+    
     submitButton.click();
     
     return new SearchResultsPage();

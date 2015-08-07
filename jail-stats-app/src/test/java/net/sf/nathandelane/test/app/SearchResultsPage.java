@@ -13,6 +13,9 @@ public class SearchResultsPage extends BasePage {
   
   @FindByXPath("//a[@class='underlined']")
   private List<WebElement> lookupLinks;
+  
+  @FindByXPath("//a[@class='generalnav' and contains(@href, 'nex')]")
+  private WebElement nextLink;
 
   protected SearchResultsPage() throws MalformedURLException, IOException {
     super(ConfigurationHelper.get().getStartingUrl(), false);
@@ -22,10 +25,24 @@ public class SearchResultsPage extends BasePage {
     return ImmutableList.<WebElement>copyOf(lookupLinks);
   }
   
-  public DetailsPage clickOnLink(int linkIndex) throws MalformedURLException, IOException {
+  public DetailsPage clickOnItemLink(int linkIndex) throws MalformedURLException, IOException {
+    Waiter.waitForSeconds(1);
+    
     lookupLinks.get(linkIndex).click();
     
     return new DetailsPage();
+  }
+  
+  public SearchResultsPage clickOnNextLink() throws MalformedURLException, IOException {
+    Waiter.waitForSeconds(1);
+    
+    nextLink.click();
+    
+    return new SearchResultsPage();
+  }
+  
+  public void close() {
+    WebDriverFactory.getWebDriver().close();
   }
 
 }
